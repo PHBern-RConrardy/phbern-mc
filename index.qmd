@@ -1,0 +1,12 @@
+---
+title: PHBern Multiple Choice
+format: html
+---
+
+Die Quarto-Erweiterung für Single- und Multiple-Choice-Fragen.
+
+## Beispiele
+
+- [HTML-Beispiel](examples/multiple-choice-html.html)
+- [RevealJS-Beispiel](examples/multiple-choice-revealjs.html)
+- [Typst-PDF](examples/multiple-choice-typst.pdf)
