@@ -1,0 +1,18 @@
+## Einzelantwort
+
+:::phbern-mc
+**Wie lautet die Hauptstadt von Frankreich?**
+
+- [ ] Berlin :: Das ist die Hauptstadt von Deutschland.
+- [x] Paris :: Dort steht der Eiffelturm.
+:::
+
+## Mehrere Antworten
+
+:::phbern-mc-multiple
+**Welche dieser Zahlen sind gerade?**
+
+- [x] $2^2$ :: 2 lässt sich ohne Rest durch 2 teilen.
+- [ ] 3 :: 3 lässt sich nicht ohne Rest durch 2 teilen.
+- [x] 4 :: 4 lässt sich ohne Rest durch 2 teilen.
+:::

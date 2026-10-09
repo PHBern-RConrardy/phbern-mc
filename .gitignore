@@ -1,0 +1,5 @@
+/.quarto/
+/_site/
+examples/multiple-choice.pdf
+examples/multiple-choice_files/
+**/*.quarto_ipynb

@@ -1,0 +1,6 @@
+---
+title: Multiple Choice
+format: phbern-mc-revealjs
+---
+
+{{< include _multiple-choice-content.qmd >}}

@@ -1,0 +1,6 @@
+project:
+  output-dir: _site
+  render:
+    - examples/multiple-choice-html.qmd
+    - examples/multiple-choice-revealjs.qmd
+    - examples/multiple-choice-typst.qmd

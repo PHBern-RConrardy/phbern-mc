@@ -1,0 +1,48 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".phbern-mc").forEach((question) => {
+    const button = question.querySelector(".phbern-mc__check");
+    const inputs = [...question.querySelectorAll("input[data-correct]")];
+    const result = question.querySelector(".phbern-mc__result");
+    button.addEventListener("click", () => {
+      if (!inputs.some((input) => input.checked)) {
+        result.textContent = "Bitte wählen Sie mindestens eine Antwort.";
+        question.classList.remove("is-correct", "is-incorrect");
+        return;
+      }
+      const points = inputs.filter((input) => (
+        input.checked === (input.dataset.correct === "true")
+      )).length;
+      const correct = points === inputs.length;
+      inputs.forEach((input) => {
+        const option = input.closest(".phbern-mc__option");
+        const selected = input.checked;
+        const isCorrect = input.dataset.correct === "true";
+        option.classList.toggle("is-correct", selected && isCorrect);
+        option.classList.toggle("is-incorrect", (selected && !isCorrect) || (!selected && isCorrect));
+        option.querySelectorAll(".phbern-mc__feedback").forEach((feedback) => { feedback.hidden = false; });
+        input.disabled = true;
+      });
+      button.hidden = true;
+      question.classList.toggle("is-correct", correct);
+      question.classList.toggle("is-incorrect", !correct);
+      if (question.dataset.mode === "single") {
+        result.textContent = correct ? "Richtig." : "Falsch.";
+      } else if (correct) {
+        result.textContent = "Alles richtig.";
+      } else {
+        result.textContent = `${points} von ${inputs.length} richtig.`;
+      }
+
+      if (correct) {
+        const celebration = document.createElement("span");
+        celebration.className = "phbern-mc__celebration";
+        celebration.setAttribute("aria-hidden", "true");
+        celebration.textContent = "🎉";
+        question.append(celebration);
+        window.setTimeout(() => celebration.remove(), 1400);
+      }
+    });
+  });
+});
+</script>

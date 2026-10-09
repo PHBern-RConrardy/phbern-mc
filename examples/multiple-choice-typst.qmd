@@ -1,0 +1,13 @@
+---
+title: Multiple Choice
+format: phbern-mc-typst
+---
+
+{{< include _multiple-choice-content.qmd >}}
+
+{{< pagebreak >}}
+
+# Lösungen
+
+:::phbern-mc-solutions
+:::
